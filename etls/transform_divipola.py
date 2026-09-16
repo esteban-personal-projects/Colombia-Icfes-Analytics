@@ -2,7 +2,7 @@ import pandas as pd
 import unicodedata
 import re
 
-df_divipola = pd.read_csv("C:\\Proyectos Personales\\colombia_icfes_analytics\\data_raw\\codigos_divipola.csv", sep=",",
+df_divipola = pd.read_csv(r"C:\Proyectos Personales\colombia icfes analytics\data\data_raw\codigos_divipola.csv", sep=",",
                           dtype={"Código Departamento": str, "Código Municipio": str})
 
 
@@ -27,4 +27,4 @@ cols = ['DIVIPOLA_SK'] + [c for c in df_divipola.columns if c != 'DIVIPOLA_ID']
 df_divipola = df_divipola[cols]
 
 
-df_divipola.to_csv("C:\\Proyectos Personales\\colombia_icfes_analytics\\data_cleaned\\dim_divipola.csv", index=False)
+df_divipola.to_csv(r"C:\Proyectos Personales\colombia icfes analytics\data\data_cleaned\dim_divipola.csv", index=False)
